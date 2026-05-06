@@ -67,33 +67,16 @@ nav a:hover {
 }
 
 
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-
-    .hero {
-        padding-top: 220px; /* 🔥 un poco más de aire */
-    }
-
-    .hero-logo {
-        position: absolute; /* asegúrate */
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        width: 140px;
-        top: 20px;
-    }
-
-    .hero-content {
-        text-align: center; /* mejora lectura en móvil */
-    }
-}
-
 
 .hero {
     position: relative;
     padding: 120px 0;
     background: url('img/main.png') center/cover no-repeat;
 }
+
+
+
+
 
 .overlay {
     position: absolute;
@@ -382,10 +365,27 @@ footer {
     transition: 0.3s;
 }
 
-/* responsive */
-@media(max-width: 900px) {
-    .section-grid {
-        grid-template-columns: 1fr;
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 60px; /* ya no necesitas tanto */
+    }
+
+    .hero-logo {
+        position: relative;   /* 🔥 CAMBIO CLAVE */
+        left: auto;
+        right: auto;
+        transform: none;
+        display: block;
+        margin: 0 auto 20px;
+        width: 140px;
+        top: auto;
+    }
+
+    .hero-content {
+        text-align: center;
     }
 }
 
