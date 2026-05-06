@@ -16,6 +16,7 @@
 
 body {
     padding-bottom: 100px;
+    font-family: 'Sora', sans-serif;
 }
 
 /* ===== CONTAINER ===== */
@@ -91,10 +92,20 @@ nav a:hover {
 .hero h1 {
     color: #ffffff;
 }
-
 h1 {
     font-size: 48px;
     margin-bottom: 20px;
+}
+
+/* Tipografía principal */
+h1, h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px; /* 🔥 mejora visual */
+}
+
+.header h2 {
+    color: #ffffff;
 }
 
 p {
@@ -151,6 +162,13 @@ p {
     transition: 0.3s;
 }
 
+
+.card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .card:hover {
     transform: translateY(-10px);
 }
@@ -184,6 +202,13 @@ p {
     background: #020617;
 }
 
+
+.benefits h2 {
+    color: #e2e8f0;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
 .benefit-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -196,6 +221,10 @@ p {
     padding: 80px 20px;
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: black;
+}
+
+.cta p {
+    color: #ffffff;
 }
 
 /* ===== PRICING ===== */
@@ -278,7 +307,15 @@ footer {
 /* ===== NUEVAS SECCIONES CORPORATIVAS ===== */
 
 .section-block {
-    padding: 100px 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+    padding: 140px 0;
+}
+
+.section-block.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-grid {
@@ -294,12 +331,16 @@ footer {
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
+.section-dark .section-title {
+    color: #e2e8f0;
+}
+
 .section-dark {
     background: #020617;
 }
 
 .section-title {
-    font-size: 34px;
+    font-size: 42px;
     margin-bottom: 20px;
 }
 
@@ -331,6 +372,9 @@ footer {
 }
 
 </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -354,7 +398,7 @@ footer {
     <img src="img/logo.png" class="hero-logo">
 
     <div class="container hero-content">
-        <h1>Control total de tu restaurante</h1>
+        <h1>Control total de su restaurante</h1>
 
         <p class="tagline">
             RESTPILOT es el sistema integral de administración de restaurantes (ERP, POS y CRM)  que su Equipo usará fácilmente. Administre su Restaurante con eficiencia y sin complicaciones. ¡Si gusta vigile y administre desde Japón! Adquiera licencia Saas (renta) ó licencia única (compra)
@@ -364,8 +408,10 @@ footer {
             “Cuando tienes control total de tu operación, la rentabilidad deja de ser suerte y se vuelve estrategia.”
         </p>
 
-        <button class="btn primary">Solicitar Demo</button>
-        <button class="btn secondary">Ver Demo</button>
+        <a href="https://wa.me/5215540033615" class="btn primary" target="_blank">
+            Solicitar Demo
+        </a>
+        
     </div>
 </section>
 
@@ -395,20 +441,50 @@ footer {
             <div class="card">
                 <div class="icon">📱</div>
                 <h3>Multi-dispositivo</h3>
-                <p>Funciona en toda tu red.</p>
+                <p>Funciona en computadoras, tablets y smartphones.</p>
             </div>
+        
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>🤖 Inteligencia Artificial</h3>
+                <p>Deje que la IA trabaje por usted: analice datos, detecte oportunidades y optimice cada área de su restaurante en tiempo real.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚚</div>
+                <h3>Plataformas y Delivery</h3>
+                <p>Integra UberEats, Rappi, Didi y pedidos propios en un solo flujo centralizado sin duplicar trabajo.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧾</div>
+                <h3>Facturación SAT</h3>
+                <p>Genera facturas electrónicas directamente desde el sistema cumpliendo con normativa fiscal en segundos.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔐</div>
+                <h3>Seguridad y Control</h3>
+                <p>Bitácoras, roles de usuario y monitoreo en tiempo real para evitar errores, fraudes y pérdidas.</p>
+            </div>
+        
+        
         </div>
     </div>
 </section>
 
 <section id="screens" class="screens">
     <div class="container">
-        <h2>Así funciona RestPilot</h2>
+        <h2>Conozca RestPilot</h2>
 
         <div class="image-grid">
+            
             <img src="img/triptico.png">
             <img src="img/dispositivos.png">
             <img src="img/integracion.png">
+            <img src="img/ia.png">
+            <img src="img/kds.png">
+            <img src="img/circulos.jpg">
         </div>
     </div>
 </section>
@@ -416,20 +492,20 @@ footer {
 <section class="benefits">
     <div class="container benefit-grid">
         <div>
-            <h2>Evita pérdidas</h2>
-            <p>Detecta inconsistencias entre cocina y sistema.</p>
+            <h2>Evite pérdidas</h2>
+            <p>Detecte inconsistencias entre cocina y sistema.</p>
         </div>
         <div>
-            <h2>Decide mejor</h2>
-            <p>Datos claros para crecer tu negocio.</p>
+            <h2>Decida mejor</h2>
+            <p>Datos claros para crecer su negocio.</p>
         </div>
     </div>
 </section>
 
 <section class="cta">
-    <h2>Tu restaurante bajo control en minutos</h2>
-    <p>Implementación rápida sin complicaciones</p>
-    <button class="btn primary">Comenzar ahora</button>
+    <h2>Su restaurante bajo control total</h2>
+    <p>Implementación guiada y adaptada a la operación de su restaurante.</p>
+
 </section>
 
 
@@ -485,7 +561,7 @@ footer {
             <p class="section-text">
                 🔥El sistema para restaurantes y bares integra una solución completa que optimiza todas las áreas del negocio:
                 desde la atención en mesas, pedidos para llevar o a domicilio, hasta el control preciso de caja, finanzas, gastos, 
-                compras y recursos humanos. Brinda herramientas clave como inventarios, logística de combos, control de proveedores
+                compras y recursos humanos. Entrega de KDS (Kitchen Display System) para que sus cocineros operen sin comanda impresa. Brinda herramientas clave como inventarios, logística de combos, control de proveedores
                  y facturación directa al SAT. Además, potencia la eficiencia operativa con funciones móviles, comandas por voz y
                   conexión directa a plataformas como UberEats, Rappi, DidiFood, Wix y WhatsApp. Incorpora inteligencia artificial
                    con ChatGPT para atención 24/7, CRM para gestionar clientes, programa de fidelización a través de canjeo de puntos
@@ -506,17 +582,8 @@ footer {
         <h2>Planes</h2>
 
         <div class="pricing-grid">
-            <div class="price-card">
-                <h3>Básico</h3>
-                <p class="price">$499</p>
-                <button class="btn primary">Elegir</button>
-            </div>
-
-            <div class="price-card highlight">
-                <h3>Pro</h3>
-                <p class="price">$999</p>
-                <button class="btn primary">Elegir</button>
-            </div>
+            
+            <img src="img/triptico_planes.png">
         </div>
     </div>
 </section>
@@ -535,6 +602,20 @@ footer {
 <footer>
     <p>© 2026 RestPilot</p>
 </footer>
+
+
+<script>
+const sections = document.querySelectorAll('.section-block');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add('visible');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
